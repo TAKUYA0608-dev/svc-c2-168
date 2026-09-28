@@ -1,0 +1,16 @@
+# Runtime parameters — loaded by AgentRegistry, passed as Graph(config=...).
+# This is a SEPARATE file from config/agent.yaml (the static manifest): agent.yaml
+# is AgentRegistry's discovery entry point, this file is the agent's own runtime
+# config, keyed by whatever your Graph/node code reads via self.config.get(...).
+# agent.yaml is the registry manifest; config.yaml holds the runtime configuration.
+
+max_retry: 3
+timeout_s: 30
+
+# memory_enabled: false
+# hitl:
+#   enabled: false
+#   max_hitl: 5
+
+# Cat 3 (autonomous) templates: budget_usd and llm are required here — see the
+# header comment in src/graph/graph.py for the exact keys your base class reads.
